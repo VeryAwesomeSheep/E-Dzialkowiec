@@ -1,0 +1,23 @@
+AT+CSCS=? - check supported codepages
+AT+CSTT? - access information
+
+INITIALIZATION
+AT - Test command
+AT+CMEE=2 - Enable verbose error messages
+AT+CPIN? - Check if SIM is unlocked
+AT+CPIN=PIN - Unlock SIM with a PIN (will return error on already unlocked SIM)
+AT+SAPBR=3,1,APN,"APN" - Configure APN
+AT+SAPBR=3,1,USER,"USER" - Configure USER for APN
+AT+SAPBR=3,1,PWD,"PASSWORD" - Configure PASSWORD for APN
+
+OPERATION
+AT+SAPBR=1,1 - Open GPRS connection
+AT+HTTPINIT - Initialize HTTP service
+AT+HTTPPARA=CID,1 - Set carrier profile identifier
+AT+HTTPPARA=URL,"URL" - Set HTTP URL
+AT+HTTPPARA=CONTENT,header - Set HTTP header
+AT+HTTPDATA=192,5000 - Open HTTP data channel (max data, time terminal waits for data input)
+AT+HTTPACTION=1 - Send HTTP POST request
+AT+HTTPREAD - Verify HTTP POST request
+AT+HTTPTERM - Terminate HTTP service
+AT+SAPBR=0,1 - Close GPRS connection

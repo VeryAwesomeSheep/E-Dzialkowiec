@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>E-Działkowicz++ - Historia pomiarów</title>
+</head>
+
+<style>
+  table, th, td {
+    border:1px solid black;
+  }
+  td {
+    white-space: pre;
+  }
+  </style>
+
+<body>
+<h2>E-Działkowicz++ Historia pomiarów</h2>
+
+<table style="width:100%">
+<tr>
+  <th>Nr</th>
+  <th>Data</th>
+  <th>Godzina</th>
+  <th>Sensor 1</th>
+  <th>Sensor 2</th>
+  <th>Sensor 3</th>
+</tr>
+
+{% for item in data %}
+<tr>
+  <td><p><center>{{item.id}}</center></p></td>
+  <td><p><center>{{item.date}}</center></p></td>
+  <td><p><center>{{item.time}}</center></p></td>
+  <td><p>{{item.sensor1}}</p></td>
+  <td><p>{{item.sensor2}}</p></td>
+  <td><p>{{item.sensor3}}</p></td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
