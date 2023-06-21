@@ -7,4 +7,6 @@ System consists of three parts:
 * [Slave controllers] - At the moment, three ESP8266 controllers that collect data from DHT11 sensor and send it to the master controller.
 
 Communication between the garden and the server is done via HTTP requests sent via GPRS.<br>
-Communication between the master controller and the slave controllers is done via TCP protocol.
+Communication between the master controller and the slave controllers is done via TCP protocol.<br><br><br>
+
+Credits to Mark Ruys for providing DHT11 library. http://www.github.com/markruys/arduino-DHT<br>
